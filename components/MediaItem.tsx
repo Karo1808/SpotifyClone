@@ -2,25 +2,27 @@
 
 import useLoadImage from "@/hooks/useLoadImage";
 import usePlayer from "@/hooks/usePlayer";
-import { Song } from "@/types";
+import { Song, SongAPI, SongData } from "@/types";
+import withPlaiceholder from "@plaiceholder/next";
+import { encode } from "blurhash";
 import Image from "next/image";
 
 interface MediaItemProps {
-  data: Song;
-  onClick?: (id: string) => void;
+  data: SongData;
+  onClick?: (url: string) => void;
 }
 
 const MediaItem = ({ data, onClick }: MediaItemProps) => {
   const player = usePlayer();
-  const imageUrl = useLoadImage(data);
 
   const handleClick = () => {
     if (onClick) {
-      return onClick(data.id);
+      return onClick(data.link);
     }
 
-    return player.setId(data.id);
+    return player.setUrl(data.link);
   };
+
   return (
     <div
       onClick={handleClick}
@@ -31,12 +33,12 @@ const MediaItem = ({ data, onClick }: MediaItemProps) => {
           alt="Media Item"
           className="object-cover"
           fill
-          src={imageUrl || "/image/liked.png"}
+          src={data.album.cover || "/image/liked.png"}
         />
       </div>
       <div className="flex flex-col gap-y-1 overflow-hidden">
         <p className="text-white truncate">{data.title}</p>
-        <p className="text-neutral-400 text-sm truncate">{data.author}</p>
+        <p className="text-neutral-400 text-sm truncate">{data.artist.name}</p>
       </div>
     </div>
   );
