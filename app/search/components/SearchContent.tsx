@@ -1,21 +1,28 @@
 "use client";
 
-import { Song } from "@/types";
+import {
+  AlbumAPI,
+  ArtistAPI,
+  GenreAPI,
+  Song,
+  SongAPI,
+  SongData,
+} from "@/types";
 import MediaItem from "@/components/MediaItem";
 import LikeButton from "@/components/LikeButton";
 import useOnPlay from "@/hooks/useOnPlay";
 
 interface SearchContentProps {
-  songs: Song[];
+  results: SongAPI;
 }
 
-const SearchContent: React.FC<SearchContentProps> = ({ songs }) => {
-  const onPlay = useOnPlay(songs);
-  if (songs.length === 0) {
+const SearchContent: React.FC<SearchContentProps> = ({ results }) => {
+  const onPlay = useOnPlay(results);
+  if (!results?.data?.length) {
     return (
       <div
         className="
-          flex 
+        flex 
           flex-col 
           gap-y-2 
           w-full 
@@ -30,10 +37,13 @@ const SearchContent: React.FC<SearchContentProps> = ({ songs }) => {
 
   return (
     <div className="flex flex-col gap-y-2 w-full px-6">
-      {songs.map((song: Song) => (
+      {results.data.map((song) => (
         <div key={song.id} className="flex items-center gap-x-4 w-full">
           <div className="flex-1">
-            <MediaItem onClick={(id: string) => onPlay(id)} data={song} />
+            <MediaItem
+              onClick={(url: string) => onPlay(song.link)}
+              data={song}
+            />
           </div>
           <LikeButton songId={song.id} />
         </div>
