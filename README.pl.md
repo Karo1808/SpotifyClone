@@ -39,3 +39,26 @@ Sklonuj repozytorium lokalnie
 ```bash
 git clone https://github.com/Karo1808/SpotifyClone.git
 ```
+
+Zainstaluj wymagane zależności
+
+```bash
+npm install
+```
+
+Utwórz plik .env.local i dodaj następujące zmienne środowiskowe
+
+```bash
+STRIPE_WEBHOOK_SECRET=
+STRIPE_SECRET_KEY=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SUPABASE_URL=
+```
+
+Uruchom stronę lokalnie
+
+```bash
+npm run dev
+```

@@ -19,7 +19,7 @@ This web application was built following a [tutorial by CodeWithAntonio](https:/
 - User Authentication: Secure user authentication system ensures privacy and personalized experiences, with various authentication providers to choose from.
 - Stripe Integration: Seamless integration with Stripe for handling payments and subscriptions.
 - Playing Songs: Users can listen to their favorite songs with built-in player functionality.
-- Liked Songs Functionality: Ability to mark songs as liked for quick access.
+- Liked Songs Functionality: Ability to mark songs as liked for quick access and personalized recommendations.
 
 ### Technologies Used
 
@@ -40,13 +40,13 @@ Clone the repository locally
 git clone https://github.com/Karo1808/SpotifyClone.git
 ```
 
-Zainstaluj wymagane zależności
+Install the required dependencies
 
 ```bash
 npm install
 ```
 
-Utwórz plik .env.local i dodaj następujące zmienne środowiskowe
+Create an .env.local file and add the following environment variables
 
 ```bash
 STRIPE_WEBHOOK_SECRET=
@@ -57,7 +57,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_SUPABASE_URL=
 ```
 
-Uruchom stronę lokalnie
+Run the website locally
 
 ```bash
 npm run dev
