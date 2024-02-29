@@ -57,6 +57,20 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_SUPABASE_URL=
 ```
 
+Utwórz tabele w supabase
+![](./assets/tables.png)
+
+Zezwól na zabezpieczenia na poziomie wiersza na podstawie obrakach poniżej
+![](./assets/rls1.png)
+![](./assets/rls2.png)
+
+Utwórz kubełki przechowywania w Supabase
+
+```bash
+songs
+images
+```
+
 Uruchom stronę lokalnie
 
 ```bash

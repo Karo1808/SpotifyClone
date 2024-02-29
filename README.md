@@ -52,9 +52,25 @@ Create an .env.local file and add the following environment variables
 STRIPE_WEBHOOK_SECRET=
 STRIPE_SECRET_KEY=
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+
 SUPABASE_SERVICE_ROLE_KEY=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_SUPABASE_URL=
+```
+
+Create tables in supabase with this structure
+
+![](./assets/tables.png)
+
+Enable row level security based on the images below
+![](./assets/rls1.png)
+![](./assets/rls2.png)
+
+Create storage buckets in supabase
+
+```bash
+songs
+images
 ```
 
 Run the website locally
