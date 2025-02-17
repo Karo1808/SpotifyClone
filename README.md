@@ -6,12 +6,6 @@
 
 Spotify Clone is a web application that emulates the functionalities of the popular music streaming service, Spotify. Unlike Spotify, this clone does not rely on external APIs for song data; instead, it utilizes Supabase to create a song library, where all supported songs are uploaded by the users.
 
-This web application was built following a [tutorial by CodeWithAntonio](https://youtu.be/2aeMRB8LL4o?si=RnJPKOE_O28fvBxE)
-
-### Demo
-
-[Website link](https://spotify-clone-seven-ochre.vercel.app/)
-
 ### Features
 
 - Browsing Songs: Users can explore a library of songs available on the platform, which are added by users themselves.
