@@ -6,12 +6,6 @@
 
 Klon Spotify aplikacja internetowa, która emuluje funkcjonalności popularnej usługi do słuchania muzyki, Spotify. W przeciwieństwie do Spotify, ten klon nie polega na zewnętrznych interfejsach API do danych o piosenkach; zamiast tego wykorzystuje Supabase do utworzenia biblioteki piosenek, w której wszystkie obsługiwane piosenki są przesyłane przez użytkowników.
 
-Ta aplikacja internetowa została zbudowana na podstawie [samouczka CodeWithAntonio](https://youtu.be/2aeMRB8LL4o?si=RnJPKOE_O28fvBxE)
-
-### Demo
-
-[Link do strony internetowej](https://spotify-clone-seven-ochre.vercel.app/)
-
 ### Funkcje
 
 - Przeglądanie Piosenek: Użytkownicy mogą eksplorować bibliotekę dostępnych na platformie piosenek, które są dodawane przez samych użytkowników.
